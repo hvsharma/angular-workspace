@@ -1,0 +1,5 @@
+- Using let and strong typing
+- Using Error Codes for error messages
+- Custom Exception Types
+- Using Map, Reduce for Traversing (Both Java & Angular)
+- 
