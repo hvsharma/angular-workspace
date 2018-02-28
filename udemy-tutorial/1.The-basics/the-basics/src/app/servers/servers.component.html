@@ -5,31 +5,22 @@
 <!-- ### Event Binding ### -->
 <div class="mt-4 form-group">
   <label class="control-label">Server Name (Event Binding)</label>
-  <input 
-    type="text" 
-    class="form-control"
-    (input)="onUpdateServerName($event)">
+  <input type="text" class="form-control" (input)="onUpdateServerName($event)">
 </div>
 <!-- ### Event Binding ### -->
 
 <!-- ### Two Way Data Binding ### -->
 <div class="mt-3 form-group">
   <label>Server Name (Two Way Binding)</label>
-  <input 
-    type="text" 
-    class="form-control"
-    [(ngModel)]="serverName">
-</div> 
+  <input type="text" class="form-control" [(ngModel)]="serverName">
+</div>
 <!-- ### Two Way Data Binding End ### -->
 
 <div class="mt-3">
   <p>{{ serverName }}</p>
 </div>
 <div class="mt-3">
-  <button 
-    [disabled]="!allowNewServer" 
-    class="btn btn-primary"
-    (click)="onCreateServer()">Add Server</button>
+  <button [disabled]="!allowNewServer" class="btn btn-primary" (click)="onCreateServer()">Add Server</button>
 </div>
 <div class="mt-3">
   <p>{{ serverCreatedStatus }}</p>
