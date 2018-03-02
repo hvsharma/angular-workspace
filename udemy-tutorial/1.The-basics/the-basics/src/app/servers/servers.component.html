@@ -25,7 +25,35 @@
 <div class="mt-3">
   <p>{{ serverCreatedStatus }}</p>
 </div>
+
+<!-- ### Use of ngIf ### -->
+<div *ngIf="serverCreated" class="mt-3">
+  <p>Server was created! And Name of the server is : {{ serverName }}</p>
+</div>
+<!-- ### Use of ngIf End ### -->
+<hr/>
+
+<!-- ### Use of ngIf-Else ### -->
+<div class="mt-3">
+  <h5 class="mb-3">Example of ngIf-Else:</h5>
+  <p *ngIf="serverCreated; else noServer">Server was created! And Name of the server is : {{ serverName }}</p>
+  <ng-template #noServer>
+    <p>No Server was Created!</p>
+  </ng-template>
+</div>
+<!-- ### Use of ngIf-Else End ### -->
+
+<!-- ### Static Server Components ### -->
 <div class="mt-4">
+  <h5 class="mb-3">Static Servers :</h5>
   <app-server></app-server>
   <app-server></app-server>
 </div>
+<!-- ### Static Server Components End ### -->
+
+<!-- ### Dynamic Server Components ### -->
+<div class="mt-4">
+  <h5 class="mb-3">Dynamic Servers :</h5>
+  <app-server *ngFor="let server of servers"></app-server>
+</div>
+<!-- ### Dynamic Server Components End ### -->
