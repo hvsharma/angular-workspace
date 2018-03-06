@@ -1,0 +1,14 @@
+<div>
+  <button class="btn btn-primary" (click)="toggleVisibility()">Display Details</button>
+  <div class="mt-4 mb-4">
+    <app-paragraph-content *ngIf="getVisibility()"></app-paragraph-content>
+  </div>
+  <div class="mt-4">
+    <p *ngFor="let logItem of getLoggingArray(); let i = index" 
+      [attr.data-index]="i" 
+      [ngClass]="(i>=4)? 'otherStyle' :''">
+      <span>{{ logItem }}</span>
+    </p>
+  </div>
+
+</div>
