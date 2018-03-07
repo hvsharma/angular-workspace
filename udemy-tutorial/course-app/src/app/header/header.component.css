@@ -1,0 +1,7 @@
+.navbar {
+  background: deepskyblue;  
+}
+
+.navbar-brand, .nav-link {
+  color: white;
+}
