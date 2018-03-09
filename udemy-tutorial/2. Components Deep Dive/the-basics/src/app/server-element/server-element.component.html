@@ -1,0 +1,10 @@
+
+<div class="card">
+  <div class="card-header">{{ element.name }}</div>
+  <div class="card-body">
+    <p [ngStyle]="{'color': element.type === 'server' ? 'red': ''}">
+      {{ element.content }}
+    </p>
+  </div>
+</div>
+ 
