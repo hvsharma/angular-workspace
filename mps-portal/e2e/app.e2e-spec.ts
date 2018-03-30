@@ -1,6 +1,6 @@
 import { AppPage } from './app.po';
 
-describe('my-first-app App', () => {
+describe('mps-portal App', () => {
   let page: AppPage;
 
   beforeEach(() => {
