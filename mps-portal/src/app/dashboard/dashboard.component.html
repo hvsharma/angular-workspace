@@ -1,0 +1,14 @@
+<h2>This is the dashboard!</h2>
+<div>
+  <div *ngFor="let user of users">
+    <div>{{user.userGUID}}</div>
+    <div>{{user.name}}</div>
+    <div>{{user.email}}</div>
+    <div *ngFor="let role of user.roles">
+      <div>{{role.roleGUID}}</div>
+      <div>{{role.roleName}}</div>
+      <div>{{role.roleShortName}}</div>
+    </div>
+    <div>{{user.userDOB}}</div>
+  </div>
+</div>
