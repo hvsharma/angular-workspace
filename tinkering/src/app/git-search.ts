@@ -1,6 +1,6 @@
 export interface GitSearch {
   'total_count': number;
-  'incomplete_results': true;
+  'incomplete_results': boolean;
   'items': Array<
     {
       'id': number;
@@ -23,12 +23,12 @@ export interface GitSearch {
         'events_url': string;
         'received_events_url': string;
         'type': string;
-        'site_admin': false
+        'site_admin': boolean
       };
-      'private': false;
+      'private': boolean;
       'html_url': string;
       'description': string;
-      'fork': false;
+      'fork': boolean;
       'url': string;
       'forks_url': string;
       'keys_url': string;
@@ -78,14 +78,14 @@ export interface GitSearch {
       'stargazers_count': number;
       'watchers_count': number;
       'language': string;
-      'has_issues': true;
-      'has_projects': true;
-      'has_downloads': true;
-      'has_wiki': false;
-      'has_pages': false;
+      'has_issues': boolean;
+      'has_projects': boolean;
+      'has_downloads': boolean;
+      'has_wiki': boolean;
+      'has_pages': boolean;
       'forks_count': number;
       'mirror_url': string;
-      'archived': false;
+      'archived': boolean;
       'open_issues_count': number;
       'license': {
         'key': string;
