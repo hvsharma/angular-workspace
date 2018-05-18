@@ -1,0 +1,23 @@
+<h2>{{ title }}</h2><br/>
+<div>
+  <input name="query" [(ngModel)]="searchQuery" placeholder="Enter query here..." >
+  <button (click)="sendQuery()" >Submit</button>
+</div>
+<img *ngIf='isSearching' src='../../assets/loading.gif' />
+<div *ngIf='searchResults && searchResults.total_count > 0; else noItemFound'>
+  <h2>Total Results: {{ searchResults.total_count }}</h2>
+  <ul>
+    <li *ngFor='let repo of searchResults.items;'>
+      <a [href]="repo.html_url">
+        <img [src]='repo.owner.avatar_url' />
+        <h4>ID: {{ repo.id }}</h4>
+        <h4>Name: {{ repo.full_name }}</h4>      
+        <h4>Login: {{ repo.owner.login }}</h4>
+      </a>
+      <h4>Description: {{ repo.description }}</h4>
+    </li>
+  </ul>
+</div>
+<ng-template #noItemFound>
+  <h3>Nothing Found :( </h3>
+</ng-template>
